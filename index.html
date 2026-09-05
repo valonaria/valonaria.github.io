@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>valoworld</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+        <style>
+
+              body{
+        flex:76%;
+        position:relative;
+        overflow-y:auto;
+        height:100vh;
+            background-image: url(images/ss073.jpg);
+        background-attachment:scroll, fixed;
+        }
+        
+            .main{
+            display: flex;
+            flex-direction: column; 
+            align-items: center;    
+            justify-content: center; 
+            width: 100%;
+            }
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            min-height: calc(100vh - 150px); 
+        }
+
+        
+        .left-column {
+            padding: 20px;
+
+            
+        }
+
+        .right-column {
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+            
+        }
+
+        .right-column::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            
+            background-image: url('https://blob.gifcities.org/gifcities/HIA7VRQF7S435UVUURA3GHSFK2ROTWQS.gif');
+            opacity: 0.6; 
+            
+            z-index: -1; 
+            }
+
+        .left-layout {
+            display: flex;
+            gap: 15px;
+            width: 100%;
+            align-items: stretch; 
+        }
+
+        .left-sidebar {
+            flex: 1;
+            padding: 10px;
+            box-sizing: border-box;
+            background-image: url(images/transmatrix.gif);
+
+        }
+
+        .left-main-content {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+                      a {
+        color:#29a6ff
+        }
+        
+      a:hover {
+        color:#015577
+        }
+
+        .block-top {
+-webkit-box-shadow: 7px -5px 10px 0px #4B0082, 11px -9px 10px 0px #0000FF, 16px -14px 10px 0px #00FF00, 20px -17px 10px 0px #FFFF00, 24px -19px 10px 0px #FF7F00, 27px -23px 10px 0px #FF0000, -9px 7px 12px 1px rgba(0,0,0,0); 
+box-shadow: 7px -5px 10px 0px #4B0082, 11px -9px 10px 0px #0000FF, 16px -14px 10px 0px #00FF00, 20px -17px 10px 0px #FFFF00, 24px -19px 10px 0px #FF7F00, 27px -23px 10px 0px #FF0000, -9px 7px 12px 1px rgba(0,0,0,0);
+background: #9400d33c;
+ border-image-slice: 27 27 27 27;
+border-image-width: 20px 20px 20px 20px;
+border-image-outset: 0px 0px 0px 0px;
+border-image-repeat: stretch stretch;
+border-image-source: url("https://blob.gifcities.org/gifcities/SCUQGOTUY7K2WIDPODELEX3YRIJYAC6E.gif");
+border-style: solid; 
+
+}
+body#tinymce {
+background: #FFFFFF
+}
+        }
+
+        .block-bottom-row {
+            display: flex;
+            gap: 15px;
+            flex: 1;
+            align-items: stretch;
+        }
+
+        .block-bottom1 {
+            flex: 1;
+            padding: 10px;
+            box-sizing: border-box;
+            background-image: url(https://blob.gifcities.org/gifcities/QDGHZI3B2QTHRD4VYES75OPBHDZ6IB2P.gif);
+             border-image-slice: 27 18 27 27;
+            border-image-width: 10px 10px 10px 10px;
+            border-image-outset: 0px 0px 0px 0px;
+            border-image-repeat: stretch stretch;
+            border-image-source: url("https://blob.gifcities.org/gifcities/QM4DCZ3GNU3DLMIVEY6BMCWHG3M5CMLB.gif");
+            border-style: solid; 
+        }
+
+
+                .block-bottom2 {
+            flex: 1;
+            padding: 10px;
+            box-sizing: border-box;
+            background-image: url(https://blob.gifcities.org/gifcities/IJGPBQ2P6OB4AVELWZ57ZQNL4R56CTPF.gif);
+
+        }
+
+            @keyframes me {
+                0%   { transform: scale(1); }
+                10%  { transform: scale(.8); }
+                30%  { transform: scale(1.2); }
+                50%  { transform: scale(.9); }
+                70%  { transform: scale(1.1); }
+                100% { transform: scale(1); }
+            }
+
+        #me {
+            box-sizing:border-box;
+            }
+        
+        #me:hover {
+            animation-name: me;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            cursor:pointer
+            }
+        
+        h1 {
+        font-family: 'Cormorant Garamond', 'EB Garamond', serif;
+        font-size: 2.5rem;
+        font-weight: 400;
+        letter-spacing: -0.03em; 
+        line-height: 1.1;
+        }
+
+        p {
+        font-family: 'Cormorant Garamond', 'EB Garamond', serif;
+        font-size: 1.4rem;
+        }
+
+
+
+
+
+
+
+              #sitemap ul {
+        list-style-position:inside;
+        padding:0px auto;
+        margin:0px
+        }
+
+              a {
+        color:#faf6f6f6
+        }
+        
+      a:hover {
+        color:#eab1f4
+        }
+
+              .border {
+        border:solid 2px white;
+        overflow-y:auto;
+        }
+
+              #sitemap {
+        height:300px;
+        width: 900px;
+        font-size:15px;
+        background-image:url(images/oa0ksYC.gif);
+        background-attachment:scroll, fixed;
+        background-size:initial, cover;
+        border:4px ridge #808080;
+        padding:10px;
+        }
+
+
+        
+
+    </style>
+
+
+<div style="position: absolute; top: 0; left: 0; z-index: 300; pointer-events: none;">
+  <img src="https://blob.gifcities.org/gifcities/3JJ62C24R2ST7H5PL5WHICKWHZKZYLLP.gif" width="327" height="143" loading="lazy" style="display: block;">
+</div>
+
+<div style="position: absolute; top: 20px; right: 50px; z-index: 300; pointer-events: none;">
+  <img src="https://blob.gifcities.org/gifcities/2IY4KLOVQBGIZ52LFRR4YBXJDLY6KFW2.gif" width="72" height="72" loading="lazy" style="display: block;">
+</div>
+
+<div style="position: absolute; top: 130px; right: 720px; z-index: 300; pointer-events: none;">
+  <img src="images/linux88.gif" width="88" height="31" loading="lazy" style="display: block;">
+</div>
+
+<div style="position: absolute; top: 130px; right: 630px; z-index: 300; pointer-events: none;">
+  <img src="https://blob.gifcities.org/gifcities/CTPFLBVXUN7NBTNUHUR2L3F26LWN4VM4.gif" width="88" height="31" loading="lazy" style="display: block;">
+</div>
+
+<div style="position: absolute; top: 130px; right: 540px; z-index: 300; pointer-events: none;">
+  <img src="images/archlinux.gif" width="88" height="31" loading="lazy" style="display: block;">
+</div>
+
+<div style="position: absolute; top: 130px; right: 450px; z-index: 300; pointer-events: none;">
+  <img src="images/apache-thanks.gif" width="88" height="31" loading="lazy" style="display: block;">
+</div>
+
+<div style="position: absolute; top: 130px; right: 360px; z-index: 300; pointer-events: none;">
+  <img src="images/backed.gif" width="88" height="31" loading="lazy" style="display: block;">
+</div>
+
+<div style="position: absolute; top: 130px; right: 270px; z-index: 300; pointer-events: none;">
+  <img src="images/bob.gif" width="88" height="31" loading="lazy" style="display: block;">
+</div>
+
+<div style="position: absolute; top: 130px; right: 180px; z-index: 300; pointer-events: none;">
+  <img src="images/click_here.gif" width="88" height="31" loading="lazy" style="display: block;">
+</div>
+
+<div style="position: absolute; top: 130px; right: 90px; z-index: 300; pointer-events: none;">
+  <img src="images/firefoxnow.gif" width="88" height="31" loading="lazy" style="display: block;">
+</div>
+
+<div style="position: absolute; top: 130px; right: 0px; z-index: 300; pointer-events: none;">
+  <img src="images/ff-banner.gif" width="88" height="31" loading="lazy" style="display: block;">
+</div>
+
+<div style="position: absolute; top: 90px; right: 720px; z-index: 300; pointer-events: none;">
+  <img src="images/burn.gif" width="88" height="31" loading="lazy" style="display: block;">
+</div>
+<div style="position: absolute; top: 90px; right: 630px; z-index: 300; pointer-events: none;">
+  <img src="images/mp3.gif" width="88" height="31" loading="lazy" style="display: block;">
+</div>
+<div style="position: absolute; top: 90px; right: 540px; z-index: 300; pointer-events: none;">
+  <img src="images/cow.gif" width="88" height="31" loading="lazy" style="display: block;">
+</div>
+<div style="position: absolute; top: 90px; right: 450px; z-index: 300; pointer-events: none;">
+  <img src="images/banana.png" width="88" height="31" loading="lazy" style="display: block;">
+</div>
+<div style="position: absolute; top: 90px; right: 300px; z-index: 300; pointer-events: none;">
+  <img src="images/blinkiesCafe-2M.gif" width="150" height="31" loading="lazy" style="display: block;">
+</div>
+
+
+<div style="position: absolute; top: 150px; left: 0; z-index: 300; pointer-events: none;">
+  <img width="68" height="44" src="https://blob.gifcities.org/gifcities/2G7CIJLX4N6634RCRSKC2BE6NXOGVTQW.gif" >
+</div>
+    
+        <header class="header">
+        <H1 style="text-align:center; color:#5BCEFA; "> welcome to my world the hole universe and things i want !!!</H1>
+        <img src="https://web.archive.org/web/20090831074916im_/http://geocities.com/SoHo/Studios/3825/universe1.gif" alt="Universe GIF" class="transparent">
+    </header>
+
+    <main class="container">
+<div class="left-column">
+    <div class="left-layout">
+        <div   class="left-sidebar">
+            <img style="height: 400px;"  src="images/me.jpg" id="me">
+            <a href="https://www.imood.com/users/val0"><img style="height: 30px;" src="https://moods.imood.com/display/uname-val0/fg-ffffff/trans-1/imood.gif" title="my current mood..." border="0"></a>
+            <br>
+            <img style="height: 60px;" src="images/bestviewedondesktop.gif" title="made on a phone!">
+            <br>
+            <img style="height: 60px;" src="https://64.media.tumblr.com/aacbd54be4a0d54b6bc68c58d874021b/tumblr_p97p60QP1Z1r2i93to2_1280.gif" >
+            <br>
+            <img width="368" height="93" src="https://blob.gifcities.org/gifcities/FWDCR7QXENW62CQCC3VGOGM3TJZ35DMG.gif">
+            <br>
+            
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img  width="184" height="46" src="images/antiai_button.png">
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img  width="352" height="131" src="images/63MO6AIUZRE4BINCAD2D454ZF2MZMQN5.gif">
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: center;">
+            <img width="192" height="192" src="https://blob.gifcities.org/gifcities/BJVS7ZWJYREZ2T7K2FU7MDUSBNQ4OOOC.gif">
+            </div>
+
+            <p></p>
+        </div>
+
+        <div class="left-main-content">
+            <div class="block-top">
+                <p style="color: #F5A9B8;">hello and welcome to my world, my name is valo {she/her} and this is my little corner of the web i use it to create the little website in my dream, share my art, my project. 
+                    I like listening to music— mostly ambiant, digicor, and experimental, leftism and anarchism, the old internet and internet freedom, archiving, video games, queerness, art in almost all forms
+                </p>
+                <p style="color: #F5A9B8;">have fun exploring the world and find some secret </p>
+                <a href="https://ia800101.us.archive.org/1/items/GuerillaOpenAccessManifesto/Goamjuly2008.pdf">
+                        <img style="height: 40px;" src="images/blinkiesCafe-7e.gif">
+
+                    </a>
+            </div>
+
+            <div class="block-bottom-row">
+                <div class="block-bottom1">
+                    <p  style=" text-align:center; color: #edccd2;" > account </p>
+                    <a href="discord.html">
+                        <img style="height: 40px;" src="images/blinkiesCafe-Kv.gif">
+                        </a>
+                        <br>
+                        <br>
+                    <a href="insta.html">
+                        <img style="height: 40px;" src="images/blinkiesCafe-6B.gif">
+                        </a>
+                        <br>
+                        <br>
+                    <a href="letterboxd.html">
+                        <img style="height: 40px;" src="https://blob.gifcities.org/gifcities/EMUGP2YULA2THLZWEDKBGGZECGZGCRQN.gif">
+                        </a>
+
+                </div>
+                <br>
+                <div class="block-bottom2">
+                    <div class="middle"><marquee scrollamount="15" onmouseover="this.stop()" onmouseout="this.start() "><img src="images/devils_button.gif" height="30px"> <img src="images/iesucks.gif"><img src="images/keep.gif">
+                    <img src="images/88_31freedownloads.gif" height="30px"><img src="images/linux_powered.gif" height="30px"><img src="images/linux.gif" height="30px">
+                    <img src="images/new-tab.gif"28px"><img src="images/newgrounds.gif" height="28px"><img src="https://bluef00t.neocities.org/music/lemondemon/imgs/sp_banner.gif" height="28"><img src="images/superultrarare.gif" height="28px">
+                    <img src="images/1001freenewfontsbutton.gif" height="28px"><img src="images/addme.gif" height="28px"><img src="images/antifa.gif" height="28px">
+                    <img src="images/ralseismokingadart.gif" height="28px"><img src="images/notepadnow.gif" height="28px"><img src="images/sbutton.gif" height="28px">
+                    <img src="images/stunning.gif" height="28px"><img src="images/blinki/vm_banner.gif" height="28px"><img src="" height="28px">
+                    <img src="https://external-media.spacehey.net/media/sBxK_lOfWmin2IUAnwqFRsP1t9LOksPGebuiIXwbz6CQ=/https://64.media.tumblr.com/99614f658d173c4314bb838520b20149/68fc51410d4c1c6a-45/s250x400/f405b02671531614b12b7897fe0042d9b1cc2ab1.gifv" height="28px"><img src="https://external-media.spacehey.net/media/sEUoSJwbnrV24l0GFt9mrVKG_uQ5ShTXY5QkoNyTS6SM=/https://64.media.tumblr.com/61db0499c943ec1d5a8e9e83841e098b/68fc51410d4c1c6a-5a/s250x400/897090367887dac290d63bebee74d15e70a3f56d.gifv" height="28px"><img src="https://external-media.spacehey.net/media/sGYDAMrhibNppXSnmjEyPQ06xNXC4KE7m93f3lEWEPNM=/https://64.media.tumblr.com/067d3c5191c03da61a46a959c231170a/68fc51410d4c1c6a-13/s250x400/f32b822853d9e8fb9bd78d4c56d97ab47ee0e7e8.gifv" height="28px">
+                    <img src="https://64.media.tumblr.com/1775039c2fe0288d3fae78cfd00a685f/27fd15063e81f2e1-14/s1280x1920/9090cea61ef7e61aec22392ea05f22018c60b4f0.gifv" height="28px"><img src="https://64.media.tumblr.com/d3615cc187f6253cf271db2d12a53aa0/981010d5b892665b-61/s250x400/e65b40a711f8989154f896c3ce089282ad48e303.gifv" height="28px"><img src="" height="28px">
+                    <img src="" height="28px"><img src="" height="28px"><img src="" height="28px">
+                    <img src="" height="28px"><img src="" height="28px"><img src="" height="28px">
+                    <img src="" height="28px"><img src="" height="28px"><img src="" height="28px">
+                    <img src="" height="28px"><img src="" height="28px"><img src="" height="28px">
+                    <img src="" height="28px"><img src="" height="28px"><img src="" height="28px">
+                    <img src="" height="28px"><img src="" height="28px"><img src="" height="28px">
+                    </marquee></div>
+                    <p></p>
+
+                    <a style="display: flex; flex-direction: column; align-items: center;" href="myart.html">
+                    <img  width="300" height="400"  src="https://blob.gifcities.org/gifcities/C3MCLAAJP2MPPZIMUAZG242LQZNZV57G.gif">
+                    </a>
+                    <p  style="text-align:center; color: #701eff;"  >  me cooking a masterpiece of art, click to see my project    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <div class="right-column">
+            <h1 style="color: #4bb53d;">world portal sidebar !!</h1>
+            <p style="color: #7dd9bc;">you can travel with it</p>
+            <img width="780" height="23" src="https://blob.gifcities.org/gifcities/7LN3P34NNLGDIYWWVM5UXOK3TNU2NJUK.gif">
+
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+                
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p style="color: #a5a800; margin-bottom: 5px;">the solar system</p>
+                    <a href="solarsystem.html">
+                        <img src="https://blob.gifcities.org/gifcities/7UAO7DWXVFRYL6HJCMBO62BMSPFQRDUS.gif">
+                    </a>
+                </div>
+
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p style="color: #0080a0; margin-bottom: 5px;">iceberg</p>
+                    <a href="iceberg.html">
+                        <img src="https://blob.gifcities.org/gifcities/6RDEF636KRA3NGHIKZOP3PLNI5OB5SRZ.gif">
+                    </a> </div>
+                    
+                
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p style="color: #1fe6ed; margin-bottom: 5px;">strange forest </p>
+                    <a href="forest.html">
+                    <img style="display: flex; "  width="200" height="175" src="https://blob.gifcities.org/gifcities/QPOAXTSKQKBPHOAU5TEQQEB6QOMDKBSD.gif"> 
+                   </a>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p style="color: #9219c1; margin-bottom: 5px;">??? </p>
+                    <a href="fractal.html">
+                        <img width="160" height="100" src="https://blob.gifcities.org/gifcities/EJZXN66C6QESXTOUG32UPKXKFD4V5BUR.gif">  
+                    </a>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p style="color: #db5252; margin-bottom: 5px;">see you  </p>
+                    <a href="eyes.html">
+                    <img width="100" height="56" src="https://blob.gifcities.org/gifcities/ARE4SCQ5Z7OGVAIL5OMDXCKM6RDUZAAX.gif">
+                    </a>
+                </div>
+                <br>
+                </div> <div style="margin-top: 20px; display: inline-block; flex-direction: column; ">
+        <p style="color: #4a8023; margin-bottom: 5px;">cool garden </p>
+        <a href="coolgarden.html">
+            <img width="124" height="160" src="https://blob.gifcities.org/gifcities/GBM6RFXISCKZUTURNVGBNS3NIIWKI646.gif">
+        </a>
+
+
+
+<div class="border" id="sitemap">
+              <ul style="list-style-position:inside">
+                <li><a href="art.html">art.html</a></li>
+                  <ul>
+                  <li><a href="art/-tober.html">-tober.html</a></li>
+                    <div class="toc"><details class="inside"><summary class="showcontent"><a href="art/archive.html">archive.html</a></summary>
+                      <ul>
+                        <li><p>planet</p>
+                          <img width="214" height="160" src="https://blob.gifcities.org/gifcities/TRYZWEOHMPZEDDDQENJGIZXVWQQCTFLL.gif"></li>
+                        <li><a href="art/archive/2021.html">2021.html</a></li>
+                        <li><a href="art/archive/2022.html">2022.html</a></li>
+                        <li><a href="art/archive/2023.html">2023.html</a></li>
+                        <li><a href="art/archive/2024.html">2024.html</a></li>
+                        <li><a href="art/archive/2025.html">2025.html</a></li>
+                        <li><a href="art/archive/2026.html">2026.html</a></li>
+                        <li><a href="art/archive/pre-2020s.html">pre-2020s.html</a></li>
+                        <li><a href="art/archive/unknown.html">unknown.html</a></li>
+                      </ul>
+                    </details></div>
+                    <li><a href="art/favorites.html">favorites.html</a></li>
+                    <li><a href="art/graffiti.html">graffiti.html</a></li>
+                  </ul>
+                <li><a href="collections.html">collections.html</a></li><a href="collections.html">
+                </a><li><a href="collections.html"></a><a href="diy-or-die.html">diy-or-die.html</a></li><a href="diy-or-die.html">
+                    </a><ul><a href="diy-or-die.html">
+                    </a><div class="toc"><a href="diy-or-die.html"></a><details class="inside"><a href="diy-or-die.html"></a><summary class="showcontent"><a href="diy-or-die.html"></a><a href="diy/clothes">clothes</a></summary>
+                      <ul>
+                        <li><a href="diy/clothes/bottoms">bottoms.html</a></li>
+                        <li><a href="diy/clothes/tops">tops</a></li>
+                      </ul>
+                      </details></div>
+                      <li><a href="diy/mixtapes.html">mixtapes.html</a></li>
+                    <div class="toc"><details class="inside"><summary class="showcontent"><a href="diy/zines">zines</a></summary>
+                      <ul>
+                        <li><a href="diy/zines/issue-1.html">issue-1.html</a></li>
+                        <li><a href="diy/zines/issue-2.html">issue-2.html</a></li>
+                        <li><a href="diy/zines/issue-3.html">issue-3.html</a></li>
+                        <li><a href="diy/zines/issue-4.html">issue-4.html</a></li>
+                        <li><a href="diy/zines/issue-5.html">issue-5.html</a></li>
+                        <li><a href="diy/zines/issue-6.html">issue-6.html</a></li>
+                      </ul>
+                      </details></div>
+                    </ul>
+                <li><a href="fanlistings.html">fanlistings.html</a></li>
+                  <ul>
+                    <li><i>outlink:</i> <a href="https://aliveandwell.net" target="_blank">aliveandwell.net</a> <sup>(site run by me)</sup></li>
+                  </ul>
+                <li><a href="gaming.html">gaming.html</a></li>
+                   <ul>
+                    <li><a href="gaming/collection.html">collection.html</a></li>
+                  </ul>
+                <li><a href="graveyard.html">graveyard.html</a></li>
+                  <ul>
+                    <li><a href="shrines/archivism.html">archivism.html</a></li>
+                    <li><a href="shrines/creatures.html">creatures.html</a></li>
+                      <ul>
+                        <li><a href="shrines/creatures/angular-roughshark.html">angular-roughshark.html</a></li>
+                        <li><a href="shrines/creatures/mola-mola.html">mola-mola.html</a></li>
+                        <li><a href="shrines/creatures/whale-sharks.html">whale-sharks.html</a></li>
+                      </ul>
+                    <li><a href="shrines/decades-and-dunks.html">decades-and-dunks.html</a></li>
+                    <li><a href="shrines/husbands.html">husbands.html</a></li>
+                    <li><a href="shrines/illegal-colors.html">illegal-colors.html</a></li>
+                    <li><a href="shrines/internet-morbidities.html">internet-morbidities.html</a></li>
+                    <li><a href="shrines/local.html">local.html</a></li>
+                      <ul>  
+                        <li><a href="shrines/local/kcm.html">kcm.html</a></li>
+                        <li><a href="shrines/local/seahawks.html">seahawks.html</a></li>
+                        <li><a href="shrines/local/wsdot.html">wsdot.html</a></li>
+                        <li><a href="shrines/local/wild-waves.html">wild-waves.html</a></li>
+                      </ul>
+                    <li><a href="shrines/pride.html">pride.html</a></li>
+                      <ul>
+                        <li><a href="shrines/pride/aromantic.html">aromantic.html</a></li>
+                        <li><a href="shrines/pride/resources.html">resources.html</a></li>
+                      </ul> 
+                    <li><a href="shrines/scary-signs.html">scary-signs.html</a></li>
+                    <li><a href="shrines/sherwin.html">sherwin.html</a></li>
+                  </ul>
+                <li><a href="history.html">history.html</a></li>
+                  <ul>
+                    <li><a href="history/iotm.html">iotm.html</a></li>
+                    <li><a href="history/v1.html">v1.html</a></li>
+                  </ul>
+                <li><a href="music.html">music.html</a></li>
+                  <ul>
+                    <li><a href="music/collection.html">collection.html</a></li>
+                    <li><a href="music/hidden-gems.html">hidden-gems.html</a></li>
+                    <li><a href="music/live-performances.html">live-performances.html</a></li>
+                    <li><a href="music/no-skip-albums.html">no-skip-albums.html</a></li>
+                    <li><a href="music/obsession-archive.html">obsession-archive.html</a></li>
+                    <li><a href="music/sister-songs.html">sister-songs.html</a></li>
+                    <li style="list-style-type:none;padding-top:8px;">bands/albums/songs</li>
+                        <li><a href="music/bands/alkaline-trio.html">alkaline-trio.html</a></li>
+                        <li><a href="music/bands/bush.html">bush.html</a></li>
+                        <li><a href="music/albums/melloncollie.html">melloncollie.html</a></li>
+                          <ul>
+                            <li><a href="music/albums/melloncollie-archive.html">melloncollie-archive.html</a></li>
+                          </ul>
+                        <li><a href="music/bands/nin.html">nin.html</a></li>
+                        <li><a href="music/albums/melloncollie.html">melloncollie.html</a></li>
+                        <li><a href="music/bands/pearl-jam.html">pearl-jam.html</a></li>
+                        <li><a href="music/songs/phantompain-betrayal.html">phantompain-betrayal.html</a></li>
+                        <li><a href="music/bands/ratm.html">ratm.html</a></li>
+                        <div class="toc"><details class="inside"><summary class="showcontent"><a href="music/bands/rise-against.html">rise-against.html</a></summary>
+                          <ul>
+                            <li><a href="music/albums/the-unraveling.html">the-unraveling.html</a></li>
+                          </ul>
+                        </details></div>                      
+                        <li><a href="music/bands/slipknot.html">slipknot.html</a></li>
+                        <div class="toc"><details class="inside"><summary class="showcontent"><a href="music/bands/tally-hall.html">tally-hall.html</a></summary>
+                          <ul>
+                            <li><a href="music/songs/good-day.html">good-day.html</a></li>
+                            <li><a href="music/songs/the-trap.html">the-trap.html</a></li>
+                          </ul>
+                        </details></div>
+                        </ul>
+                <li><a href="now.html">now.html</a></li>
+                <li><a href="photos.html">photos.html</a></li>
+                  <ul>
+                    <li><a href="photos/miscellaneous.html">miscellaneous.html</a></li>
+                    <li><a href="photos/parties.html">parties.html</a></li>
+                    <li><a href="photos/shows.html">shows.html</a></li>
+                  </ul>
+                <li><a href="reading.html">reading.html</a></li>
+                <li><a href="resources.html">resources.html</a></li>
+                  <ul>
+                    <li><a href="resources/ICE.html">ICE.html</a></li>
+                    <li><a href="resources/life-skills.html">life-skills.html</a></li>
+                    <li><a href="resources/palestine.html">palestine.html</a></li>
+                    <li><a href="resources/tech-and-net.html">tech-and-net.html</a></li>
+                    <li><a href="resources/the-arts.html">the-arts.html</a></li>
+                  </ul>
+                <li><a href="stickerbook.html">stickerbook.html</a></li>
+                <li><a href="temp.html">temp.html</a></li>
+                <li><a href="tv-and-film.html">tv-and-film.html</a></li>
+                  <ul>
+                    <li><a href="tv-and-film/saw.html">saw.html</a></li>
+                    <li><a href="tv-and-film/valentines-day.html">valentines-day.html</a></li>
+                  </ul>
+                <li><a href="writing.html">writing.html</a></li>
+                  <ul>
+                    <li><a href="writing/dream-journal.html">dream-journal.html</a></li>
+                    <li><a href="writing/muse.html">muse.html</a></li>
+                    <li><a href="writing/memories.html">memories.html</a></li>
+                    <div class="toc"><details class="inside"><summary class="showcontent"><a href="writing/poetry.html">poetry.html</a></summary>
+                      <ul>
+                        <li><a href="writing/poetry/2021.html">2021.html</a></li>
+                        <li><a href="writing/poetry/2022.html">2022.html</a></li>
+                        <li><a href="writing/poetry/2023.html">2023.html</a></li>
+                        <li><a href="writing/poetry/2024.html">2024.html</a></li>
+                        <li><a href="writing/poetry/2025.html">2025.html</a></li>
+                        <li><a href="writing/poetry/2026.html">2026.html</a></li>
+                        <li><a href="writing/poetry/pre-2020s.html">pre-2020s.html</a></li>
+                        <li><a href="writing/poetry/unknown.html">unknown.html</a></li>
+                      </ul>
+                      </details></div>
+                  </ul>
+                <li><a href="webmaster.html">webmaster.html</a></li>
+                  <ul>
+                    <li><a href="webmaster/trivia.html">trivia.html</a></li>
+                  </ul>
+              </ul>
+            </div>
+              <img src="https://blob.gifcities.org/gifcities/YQELNS56FNOW4P2QVXZ65Q6CILWO6Z3P.gif" width="900" height="200" loading="lazy" style="display: block;">
+
+    </div>
+
+
+    
+</div>
+    </main>
+
+
+        
+</body>
+</html>
