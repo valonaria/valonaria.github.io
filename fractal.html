@@ -7,10 +7,75 @@
 </head>
 <body>
      <style>
-         
+
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+.rotating {
+  animation: rotating 2s linear infinite;
+}
+
+@keyframes rotatingg {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.rotatingg {
+  animation: rotatingg 2s linear infinite;
+}
+
+                 body{
+            background-image: url(images/saveback.gif);
+
+        }
      </style>
 
     <script data-goatcounter="https://valonaria.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+
+
+<div 
+  class="rotating"
+  style=" max-height: 300px; position: fixed; left: 200px; top: 100px; z-index: 300; height: 300px; width: 400px;" 
+ ><img src="images/spin.gif" alt=""></div>
+ <div 
+  class="rotatingg"
+  style=" max-height: 300px; position: fixed; left: 1200px; top: 300px; z-index: 300; height: 300px; width: 400px;" 
+ ><img src="images/spin2.gif" alt=""></div>
+
+                   <div style=" max-height: 50px; position: fixed; left: 100px; top: 800px; z-index: 300;">
+ <img src="images/fractal1.gif" 
+         </div>
+
+                            <div style=" max-height: 50px; position: fixed; left: 1300px; top: 600px; z-index: 300;">
+ <img src="images/brain.gif" 
+         </div>
+
+                 <div style="position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 300;">
+    <img src="images/fractalcube.gif" alt="Mon GIF centré">
+
+</div>
+
+                            <div style=" max-height: 50px; position: fixed; left: 1300px; top: 100px; z-index: 300;">
+ <img src="images/platypus.gif" 
+         </div>
+
+<div style="position: fixed; left: 910px; top: 128px; z-index: 300;">
+    <img src="images/fractal2.gif" alt="Fractal 2" style="width: 300px;">
+</div>
+
+<div style="position: fixed; left: 927px; top: 800px; z-index: 300;">
+    <img src="images/fractal3.gif" alt="Fractal 2" style="width: 300px;">
+</div>
+
 </body>
 </html>
