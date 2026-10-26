@@ -53,8 +53,7 @@
     </div>
 
     <script>
-        // ⚠️ REMPLACEZ PAR L'URL DE VOTRE SERVEUR RENDER GRATUIT
-        const API_URL = "https://onrender.com"; 
+        const API_URL = "https://valonaria-backend.onrender.com"; 
         
         let currentSubId = null;
 
@@ -62,7 +61,6 @@
         async function router() {
             const hash = window.location.hash;
             
-            // Si l'URL contient #/quelque-chose
             if (hash.startsWith('#/') && hash.length > 2) {
                 const subName = hash.replace('#/', '');
                 showView('sub');
