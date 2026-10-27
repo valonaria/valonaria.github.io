@@ -82,7 +82,12 @@ const API_URL = "https://valonaria-backend.onrender.com/api";
 
         window.addEventListener('hashchange', router);
         // Lancer au premier chargement de la page
-        window.addEventListener('DOMContentLoaded', router);
+        window.addEventListener('DOMContentLoaded', () => {
+    if (!window.location.hash) {
+        window.location.hash = '#/';
+    }
+    router();
+});
 
 
         async function loadAllSubreddits() {
