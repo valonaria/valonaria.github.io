@@ -159,10 +159,10 @@ const API_URL = "https://valonaria-backend.onrender.com/api";
     async function postMessage() {
         const pseudo = document.getElementById('msg-pseudo').value;
         const content = document.getElementById('msg-content').value;
-        const token = turnstile.getResponse('#captcha-msg');
+        //const token = turnstile.getResponse('#captcha-msg');
     
         if(!content) return alert("Le message ne peut pas être vide.");
-        if(!token) return alert("Veuillez prouver que vous n'êtes pas un bot.");
+        //if(!token) return alert("Veuillez prouver que vous n'êtes pas un bot.");
         if(!currentSubId) return alert("Identifiant de flux introuvable.");
 
         try {
