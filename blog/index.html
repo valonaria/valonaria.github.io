@@ -155,27 +155,35 @@ const API_URL = "https://valonaria-backend.onrender.com/api";
             }
         }
 
-        async function postMessage() {
-            const pseudo = document.getElementById('msg-pseudo').value;
-            const content = document.getElementById('msg-content').value;
-            const token = turnstile.getResponse();
+    async function postMessage() {
+        const pseudo = document.getElementById('msg-pseudo').value;
+        const content = document.getElementById('msg-content').value;
+        const token = turnstile.getResponse('#captcha-msg');
+    
+        if(!content) return alert("Le message ne peut pas être vide.");
+        if(!token) return alert("Veuillez prouver que vous n'êtes pas un bot.");
+        if(!currentSubId) return alert("Identifiant de flux introuvable.");
 
-            if(!content) return alert("Le message est vide");
-            if(!token) return alert("Veuillez valider le Captcha");
-
+        try {
             const res = await fetch(`${API_URL}/messages`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ sub_id: currentSubId, pseudo, content, captchaToken: token })
+                body: JSON.stringify({ sub_id: parseInt(currentSubId), pseudo, content, captchaToken: token })
             });
 
             if(res.ok) {
                 document.getElementById('msg-content').value = "";
-                turnstile.reset();
-                const hash = window.location.hash;
-                await loadSubredditData(hash.replace('#/', '')); 
+                turnstile.reset('#captcha-msg');
+                await loadSubredditData(window.location.hash.replace('#/', ''));
+            } else {
+                const errData = await res.json();
+                alert(errData.error || "Erreur lors de la diffusion.");
+                turnstile.reset('#captcha-msg');
             }
+        } catch (e) {
+            alert("Échec de communication serveur.");
         }
+    }
     </script>
 </body>
 </html>
