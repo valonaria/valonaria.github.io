@@ -111,6 +111,7 @@ const API_URL = "https://valonaria-backend.onrender.com/api";
             try {
                 const res = await fetch(`${API_URL}/subs/${title}`);
                 const data = await res.json();
+                currentSubId = data.sub.id;
                 
                 currentSubId = data.sub.id;
                 document.getElementById('sub-title').innerText = `r/${data.sub.title}`;
